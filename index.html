@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Fiche Personnelle</title>
+</head>
+<body>
+  <div class="profile-card">
+    <h1>Fiche Personnelle</h1>
+    <div class="profile-info">
+      <img src="img/img.jpg" alt="Photo de profil" class="profile-photo">
+      <div class="details" id="profile-details">
+        <p><strong>Nom :</strong> Mihoubi</p>
+        <p><strong>Prénom :</strong> Mohammed Khalil</p>
+        <p><strong>Date de Naissance :</strong> 20 Avril 2002</p>
+        <p><strong>Email :</strong> exemple@gmail.com</p>
+        <p><strong>Téléphone :</strong> +21366666666</p>
+        <p><strong>Adresse :</strong> Diar Zarga3 - Souk Ahras - Algérie</p>
+      </div>
+    </div>
+    <div class="options">
+      <button onclick="toggleView()">Voir</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleView() {
+      const details = document.getElementById("profile-details");
+      const button = document.querySelector("button");
+
+      if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+        button.textContent = "Cacher"; 
+      } else {
+        details.style.display = "none";
+        button.textContent = "Voir"; 
+      }
+    }
+  </script>
+</body>
+</html>
